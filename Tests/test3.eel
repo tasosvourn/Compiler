@@ -1,0 +1,20 @@
+program test
+    procedure p()
+        function f()
+            return x
+        endfunction
+
+    endprocedure
+    input x;
+
+    repeat
+        exit;
+        while x<10
+            print x;
+            repeat
+                exit
+            endrepeat;
+            x := x+1;
+        endwhile
+    endrepeat
+endprogram

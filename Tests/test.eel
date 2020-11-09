@@ -1,0 +1,39 @@
+program test
+    declare a enddeclare
+    procedure p(in j, inout k)
+        declare b,c,d enddeclare
+        function f(in x, inout y)
+            repeat
+                k:=4*6/4;
+                k:=3+4;
+                l:=0;
+                while not [ x <> y]
+                    x := x - 1
+                endwhile;
+                switch y
+                    case a : x:=0
+                    case b : y:=0
+                endswitch
+            endrepeat;
+
+            return k;
+
+        endfunction
+        a := 0 + 2-i+s/3*4-f(in x, inout y)*p();
+        if k<10 or x>= y+3 then
+            i:=3;
+            forcase
+                when true : i:=i+2
+                when [false] : i:=i-1
+            endforcase
+        else
+            i:=5;
+            exit
+        endif;
+
+    endprocedure
+
+    input a;
+    call p(in a, inout a);
+    print a
+endprogram

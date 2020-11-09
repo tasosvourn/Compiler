@@ -1,0 +1,50 @@
+program test
+    declare a,b,c enddeclare
+    function f(in x, in y)
+        declare c enddeclare
+
+        c := x + y;
+        y := x*c+12;
+        print y;
+        return x+10
+    endfunction
+    procedure p(in c)
+        print c;
+        if c>=20 then
+            repeat
+                print c;
+                if c < 0 then
+                    exit
+                endif;
+                c:=c-20;
+            endrepeat
+        else
+            print 1234
+        endif
+    endprocedure
+
+    input a;
+    input b;
+    c := f(in a, in b);
+    print b;
+    print c;
+    c:=21;
+    call p(in c);
+
+    c :=100;
+    while c<1000
+        c:=c+100
+    endwhile;
+    print c;
+
+    c:=10;
+    switch c
+        case 1: print 1;
+        case 2: print 2;
+        case 10:
+            forcase
+                when c >=10 : print c;
+                when c >=5 : print c; c:=c-1;
+            endforcase
+    endswitch
+endprogram

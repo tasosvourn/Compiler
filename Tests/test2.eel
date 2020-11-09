@@ -1,0 +1,63 @@
+program test
+    declare a,b,x,L,k,t,l,y,m,jk enddeclare
+
+
+    function f(in x, inout y)
+            declare b,c enddeclare
+                return x
+    endfunction
+
+    procedure p(in x)
+        function f(in x, inout y)
+            declare b,c enddeclare
+                return x
+        endfunction
+        function f2()
+                b:=f();
+                return x
+        endfunction
+
+        while not [a<>b]
+            a:=a+1;
+        endwhile;
+
+    endprocedure
+    if x=y and m<0 then
+        x:= k+l/4-9;
+    else
+        x:=0
+    endif;
+
+    while not [a<>b]
+        a:=a+1;
+    endwhile;
+
+    repeat
+        x:=0;
+        exit;
+        repeat
+         L:=90+34;
+         exit
+        endrepeat;
+
+        k:=9
+    endrepeat;
+
+    switch k
+        case 1 : x:=1
+        case 2 : x:=2
+        case 3 : x:=3
+    endswitch;
+
+    forcase
+        when x<y : t:=0
+        when k>y : l:=9+jk
+    endforcase;
+
+    call p(in x+1, inout y);
+
+    a:= a + f(in x);
+
+    call p(inout a, in f(in x));
+    input a
+endprogram
